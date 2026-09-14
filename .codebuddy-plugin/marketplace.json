@@ -1,0 +1,19 @@
+{
+  "name": "szwater-experts",
+  "description": "深圳水务集团数字员工专家市场（内部）",
+  "owner": {
+    "name": "深圳水务集团数字员工项目组",
+    "email": "digital-employee@szwater.example"
+  },
+  "version": "1.6.0",
+  "plugins": [
+    {
+      "name": "water-office-writer",
+      "source": "./plugins/water-office-writer",
+      "description": "综合办公文写作专家：学习领导讲话风格（语气、句式、金句、词汇分层），三文种分道生成格式规范的总结、致辞与呈报材料，兼具知识库治理能力。",
+      "version": "1.6.0",
+      "category": "productivity",
+      "keywords": ["公文写作", "领导风格建模", "领导语言手册", "金句库", "文种分道", "知识库治理"]
+    }
+  ]
+}

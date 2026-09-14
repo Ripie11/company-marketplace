@@ -1,0 +1,92 @@
+[
+  {
+    "case_id": "C01",
+    "report_type": "年度工作总结",
+    "leader": "龚利民",
+    "target_format": "docx",
+    "note": "年终总结范式：三词对仗主标题＋『——在……上的讲话』副标题＋一/（一）/1. 三级层次＋职务落款",
+    "md_path": "E:\\深圳水务集团\\2.2-数字员工项目\\专家分发\\company-marketplace\\plugins\\water-office-writer\\skills\\zhibi-suiwen\\selftest\\cases\\C01_年度工作总结_龚利民.md",
+    "md_chars": 952
+  },
+  {
+    "case_id": "C02",
+    "report_type": "半年工作总结",
+    "leader": "方琳",
+    "target_format": "docx",
+    "note": "半年总结范式：称呼『利民董事长，各位同事：』＋『一、成效/二、压力/三、关注/四、加油努力』四段式",
+    "md_path": "E:\\深圳水务集团\\2.2-数字员工项目\\专家分发\\company-marketplace\\plugins\\water-office-writer\\skills\\zhibi-suiwen\\selftest\\cases\\C02_半年工作总结_方琳.md",
+    "md_chars": 830
+  },
+  {
+    "case_id": "C03",
+    "report_type": "重要会议致辞",
+    "leader": "龚利民",
+    "target_format": "docx",
+    "note": "致辞类：称呼语顶格不缩进；短篇无『一、』层次；结尾号召句式",
+    "md_path": "E:\\深圳水务集团\\2.2-数字员工项目\\专家分发\\company-marketplace\\plugins\\water-office-writer\\skills\\zhibi-suiwen\\selftest\\cases\\C03_重要会议致辞_龚利民.md",
+    "md_chars": 349
+  },
+  {
+    "case_id": "C04",
+    "report_type": "对外汇报（部委）",
+    "leader": "方琳",
+    "target_format": "docx",
+    "note": "探针：Markdown 表格能否落地为 docx 表格；含附件说明行",
+    "md_path": "E:\\深圳水务集团\\2.2-数字员工项目\\专家分发\\company-marketplace\\plugins\\water-office-writer\\skills\\zhibi-suiwen\\selftest\\cases\\C04_对外汇报（部委）_方琳.md",
+    "md_chars": 586
+  },
+  {
+    "case_id": "C05",
+    "report_type": "专题汇报",
+    "leader": "方琳",
+    "target_format": "docx",
+    "note": "探针：行内**加粗**、`1.` 有序列表、半角数字与百分号混排",
+    "md_path": "E:\\深圳水务集团\\2.2-数字员工项目\\专家分发\\company-marketplace\\plugins\\water-office-writer\\skills\\zhibi-suiwen\\selftest\\cases\\C05_专题汇报_方琳.md",
+    "md_chars": 508
+  },
+  {
+    "case_id": "C06",
+    "report_type": "会议纪要",
+    "leader": "方琳",
+    "target_format": "docx",
+    "note": "纪要类：无『同志们：』称呼语；正文首段为会议要素；议题/决议分层",
+    "md_path": "E:\\深圳水务集团\\2.2-数字员工项目\\专家分发\\company-marketplace\\plugins\\water-office-writer\\skills\\zhibi-suiwen\\selftest\\cases\\C06_会议纪要_方琳.md",
+    "md_chars": 501
+  },
+  {
+    "case_id": "C07",
+    "report_type": "调研报告",
+    "leader": "龚利民",
+    "target_format": "docx",
+    "note": "探针：四级层次『（1）』、嵌套表格、长段落引语（楷体引语+仿宋正文）",
+    "md_path": "E:\\深圳水务集团\\2.2-数字员工项目\\专家分发\\company-marketplace\\plugins\\water-office-writer\\skills\\zhibi-suiwen\\selftest\\cases\\C07_调研报告_龚利民.md",
+    "md_chars": 701
+  },
+  {
+    "case_id": "C08",
+    "report_type": "述职报告",
+    "leader": "方琳",
+    "target_format": "docx",
+    "note": "述职类：第一人称密集、三段时间结构",
+    "md_path": "E:\\深圳水务集团\\2.2-数字员工项目\\专家分发\\company-marketplace\\plugins\\water-office-writer\\skills\\zhibi-suiwen\\selftest\\cases\\C08_述职报告_方琳.md",
+    "md_chars": 447
+  },
+  {
+    "case_id": "C09",
+    "report_type": "讲话稿（短篇）",
+    "leader": "龚利民",
+    "target_format": "md",
+    "note": "格式维度覆盖：验证 .md 输出分支（不落版）",
+    "md_path": "E:\\深圳水务集团\\2.2-数字员工项目\\专家分发\\company-marketplace\\plugins\\water-office-writer\\skills\\zhibi-suiwen\\selftest\\cases\\C09_讲话稿（短篇）_龚利民.md",
+    "md_chars": 310
+  },
+  {
+    "case_id": "C10",
+    "report_type": "边界用例",
+    "leader": "",
+    "target_format": "docx",
+    "note": "探针：未识别领导回退版式、四级标题 ####、无序列表 -、斜体、>25字长称呼语、中文全角/半角混排",
+    "md_path": "E:\\深圳水务集团\\2.2-数字员工项目\\专家分发\\company-marketplace\\plugins\\water-office-writer\\skills\\zhibi-suiwen\\selftest\\cases\\C10_边界用例_未指定.md",
+    "md_chars": 347
+  }
+]

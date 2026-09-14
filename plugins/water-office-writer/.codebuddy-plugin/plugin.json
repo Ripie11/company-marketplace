@@ -1,0 +1,47 @@
+{
+  "name": "water-office-writer",
+  "version": "1.6.0",
+  "description": "Official-document writing specialist for a Chinese water utility group's general office: replicates leadership speech styles, supports multi-source style modeling (docx / pdf / md, with PDF OCR for scanned documents and MD frontmatter for font hints), distinguishes document genres (work summaries vs. ceremonial speeches vs. official request reports each use separate templates), and generates format-compliant reports. Ships per-leader voice handbooks (tone DNA, sourced golden phrases, sentence paradigms, layered vocabulary, forbidden lists) mined from real corpora, with golden-phrase density guardrails. Includes knowledge-base governance utilities (document archival, metadata generation, sync to Lexiang) to keep source materials organized for retrieval.",
+  "author": {
+    "name": "深圳水务集团数字员工项目组"
+  },
+  "agents": ["./agents/water-office-writer.md"],
+  "skills": [
+    "./skills/zhibi-suiwen",
+    "./skills/knowledge-base-organizer"
+  ],
+
+  "expertType": "agent",
+  "agentName": "water-office-writer",
+
+  "displayName": {
+    "en": "Secretary Specialist",
+    "zh": "文秘专员"
+  },
+  "profession": {
+    "en": "Corporate Office Writing Specialist",
+    "zh": "文秘专员"
+  },
+  "displayDescription": {
+    "en": "Models each leader's writing voice (tone, sentence patterns, sourced golden phrases, layered vocabulary) and generates format-compliant official documents across three genre templates (reports, ceremonial speeches, official request reports). Also covers knowledge-base governance: archive organization, metadata generation, and sync to Lexiang.",
+    "zh": "精通水务国企公文写作，学习领导文风（语气、句式、金句、词汇分层）并生成格式规范的总结、致辞与呈报材料，兼具知识库治理能力。"
+  },
+  "avatar": "avatars/expert.png",
+  "categoryId": "06-ContentCreative",
+  "defaultInitPrompt": {
+    "zh": "根据龚董风格，生成2026年上半年工作总结报告",
+    "en": "Generate the 2026 H1 work summary report in Chairman Gong's style"
+  },
+  "plugin": "water-office-writer",
+  "tags": [
+    { "en": "Official Document Writing", "zh": "公文写作" },
+    { "en": "Leadership Style Modeling", "zh": "领导风格建模" },
+    { "en": "Knowledge Base Governance", "zh": "知识库治理" }
+  ],
+  "quickPrompts": [
+    { "en": "Generate the 2026 H1 work summary report in Chairman Gong's style", "zh": "根据龚董风格，生成2026年上半年工作总结报告" },
+    { "en": "Draft a year-end speech in President Fang Lin's tone", "zh": "以方琳总的口吻起草一份年终总结讲话稿" },
+    { "en": "Enrich the leadership golden-phrase library from the knowledge base", "zh": "从知识库里再丰富一下领导的金句库" },
+    { "en": "Archive this batch of documents into the knowledge base and generate the import manifest", "zh": "把这批文档归档到知识库，生成导入清单" }
+  ]
+}

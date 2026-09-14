@@ -1,0 +1,27 @@
+# knowledge-base-organizer · Python 依赖
+#
+# 安装方式（推荐：managed runtime venv，避免污染系统 Python）：
+#   # 1) 已有 managed venv：直接装进 default
+#   "C:/Users/Ripie/.workbuddy/binaries/python/envs/default/Scripts/python.exe" \
+#       -m pip install -r requirements.txt
+#
+#   # 2) 若需新 venv：
+#   py -3.13 -m venv .venv
+#   .venv\Scripts\pip install -r requirements.txt
+#
+# 验证（6 包 import）：
+#   python -c "import docx, pptx, pdfplumber, openpyxl, yaml, requests; print('ok')"
+#
+# 已验证版本（2026-09-11, Python 3.13.12, managed venv default）：
+#   requests 2.34.2 / PyYAML 6.0.3 / python-docx 1.2.0 /
+#   python-pptx 1.0.2 / pdfplumber 0.11.10 / openpyxl 3.1.5
+
+# === HTTP / 配置 ===
+requests>=2.31          # lexiang_client.py — 乐享知识库 MCP HTTP 凭据
+pyyaml>=6.0             # classify.py — 加载 taxonomy.yaml / routing-rules.yaml
+
+# === Office / PDF 文档解析 ===
+python-docx>=1.1.0      # classify.py — .docx 标题/段落扫描
+python-pptx>=0.6.21     # classify.py — .pptx 标题/页数扫描
+pdfplumber>=0.10.0      # classify.py — .pdf 首页文本抽取
+openpyxl>=3.1.2         # reorganize_template.py — 生成 _metadata.xlsx

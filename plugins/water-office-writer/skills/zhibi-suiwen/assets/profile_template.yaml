@@ -1,0 +1,122 @@
+# 领导风格档案模板
+# 本文件是 build_style_profile.py 输出的标准模板，请勿直接修改
+# 如需自定义字段，请联系 skill 维护者或在生成脚本中扩展
+
+meta:
+  leader_name: ""                 # 领导姓名（如：龚利民、方琳）
+  leader_title: ""                # 职务（如：董事长、总裁）
+  organization: ""                # 单位名称
+  sample_count: 0                 # 样本数量
+  sample_files: []                # 样本文件名列表
+  generated_at: ""                # 生成时间（ISO 8601）
+  generated_by: "zhibi-suiwen v1.0"
+  version: "v1"                   # 档案版本号
+
+format:
+  fonts:
+    issuing_org:                  # 发文机关标志（红色字体）
+      family: "方正小标宋简体"
+      size_pt: 22
+      color: "FF0000"
+    main_title:                   # 主标题
+      family: "方正小标宋简体"
+      size_pt: 22
+      color: "000000"
+    h1:                           # 一级标题
+      family: "黑体"
+      size_pt: 16
+      bold: false
+    h2:                           # 二级标题
+      family: "楷体_GB2312"
+      size_pt: 16
+    h3:                           # 三级标题
+      family: "仿宋_GB2312"
+      size_pt: 16
+      bold: true
+    body:                         # 正文
+      family: "仿宋_GB2312"
+      size_pt: 16
+    page_number:                  # 页码
+      family: "仿宋_GB2312"
+      size_pt: 14
+
+  paragraph:
+    alignment: "justify"          # 两端对齐
+    line_spacing_type: "fixed"    # fixed / multiple
+    line_spacing_value: 28        # 固定值 28pt
+    first_line_indent_chars: 2    # 首行缩进 2 字符
+    space_before_pt: 0
+    space_after_pt: 0
+
+  page:
+    paper_size: "A4"              # A4
+    margins_mm:                   # 单位 mm
+      top: 37
+      bottom: 35
+      left: 28
+      right: 26
+    page_number_position: "bottom-center"  # bottom-center / bottom-right
+    header_text: ""               # 页眉文本（可空）
+    footer_text: ""               # 页脚文本（可空）
+
+  heading_numbering:              # 标题编号格式
+    level_1: "一、"               # 一级标题用"一、二、三、"
+    level_2: "（一）"             # 二级标题用"（一）（二）（三）"
+    level_3: "1."                 # 三级标题用"1.2.3."
+    level_4: "（1）"              # 四级标题用"（1）（2）（3）"
+
+linguistic:
+  sentence_patterns:
+    opener:                       # 开篇模式
+      - "在……之际"
+      - "为深入贯彻……"
+      - "本次大会的主要任务是"
+    body:                         # 主体模式
+      - "……，……，……"
+      - "一是要……，二是要……，三是要……"
+    closer:                       # 收尾模式
+      - "让我们更加紧密地团结在……周围"
+      - "为……而努力奋斗"
+      - "以优异成绩迎接……"
+
+  vocabulary:
+    high_freq_4char: []           # 高频四字词列表
+    political_terms: []           # 政治表述列表
+    verbs: []                     # 高频动词列表
+    adverbs: []                   # 高频副词列表
+
+  structure:
+    typical_outline:              # 标准结构骨架
+      - "一、回顾过去工作"
+      - "二、分析当前形势"
+      - "三、部署下一步任务"
+      - "四、号召与要求"
+
+  rhetoric:
+    devices:                      # 常用修辞
+      - "排比"
+      - "对仗"
+      - "引用"
+    avoid:                        # 禁忌
+      - "绝对化表述"
+      - "夸张修辞"
+      - "口语化表达"
+
+signature:
+  format: "right-aligned"         # right-aligned / centered
+  name_format: "领导姓名（不写职务）"
+  date_format: "YYYY年M月D日"      # 或 YYYY-MM-DD
+  example: |                      # 示例
+    方  琳
+    2026年9月10日
+
+metadata:
+  compliance:                     # 合规性自检
+    follows_gbt_9704: true        # 是否符合 GB/T 9704-2012
+    deviations: []                # 与标准偏差说明
+    notes: ""                     # 其他备注
+
+# 维护说明：
+# 1. 本档案由 build_style_profile.py 自动生成，人工可微调。
+# 2. 修改前请备份原文件，避免覆盖丢失。
+# 3. 新增领导档案时复制本文件，文件名命名为 profile_<领导名>_v<版本>.yaml。

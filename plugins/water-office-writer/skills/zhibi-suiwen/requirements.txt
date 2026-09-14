@@ -1,0 +1,77 @@
+# 依赖说明
+
+本 skill 需要以下 Python 包，建议在虚拟环境中安装：
+
+```bash
+pip install python-docx python-pptx pdfplumber pypdf pyyaml jieba
+pip install pywin32 docx2pdf        # 仅 Windows：PDF 导出（--pdf / --to-pdf）
+```
+
+## 各包用途
+
+| 包名 | 用途 | 用于哪个脚本 |
+|------|------|--------------|
+| python-docx | 读写 .docx 文件 | extract_docx.py, md_to_gongwen_docx.py, generate_report.py |
+| python-pptx | 读写 / 生成 .pptx 文件 | extract_pptx.py, md_to_pptx.py |
+| pdfplumber | PDF **字符级**解析（坐标、字号、字体），用于段落重构 + 字号反推 | extract_pdf.py, dump_corpus.py |
+| pypdf | PDF 元数据 / 降级读取的备用库（pdfplumber 出错时回退） | extract_pdf.py（兜底） |
+| PyYAML | 读写 YAML 档案、解析 MD frontmatter | build_style_profile.py, md_to_gongwen_docx.py, generate_report.py, extract_md.py |
+| jieba | 中文分词（四字词 / 政策表述统计） | build_style_profile.py |
+| pywin32 | Word COM 调用（PDF 导出通道 1、老 .doc 转换） | pdf_export.py, dump_corpus.py |
+| docx2pdf | PDF 导出兜底（通道 2） | pdf_export.py |
+
+> ⚠️ `pywin32` / `docx2pdf` **仅 Windows** 且需本机安装 Microsoft Word。
+> 无 Word 时 `--pdf` 会报明确错误，并提示改用
+> `soffice --headless --convert-to pdf <file.docx>`（LibreOffice）。
+
+## 零依赖 / 惰性导入脚本
+
+| 脚本 | 依赖情况 |
+|------|----------|
+| `extract_md.py` | **纯标准库**（正则手写解析器；PyYAML 仅用于 frontmatter） |
+| `pick_corpus.py` | **纯标准库**（从全量语料造通读选集） |
+| `mine_phrases.py` | **纯标准库**（n-gram + 启发式打分，不依赖分词库） |
+| `dump_corpus.py` | **惰性导入**：docx / pdf / pptx 各自的库在函数内按需导入，缺失或解析失败时记 `skip` 并继续，不中断整批 |
+
+> `extract_md.py` 故意不依赖 `markdown` 库，原因：① 避免依赖膨胀 ② 对 heading 层级、强调等特性保留完全控制 ③ 零安装 = 即开即跑。
+> PyYAML 用于解析 MD 顶部 YAML frontmatter（`font_body` / `size_body_pt` 等格式声明）。
+
+## 可选依赖（用于高级特性）
+
+```bash
+pip install rapidocr-onnxruntime pillow    # 扫描件 PDF OCR（extract_pdf.py --ocr，未装时 graceful 降级）
+pip install sentence-transformers          # 本地向量化，用于检索相似段落
+pip install opencc-python-reimplemented    # 简繁体转换
+pip install pymupdf                        # PDF 结构校验（验证页脚页码 / 纸张尺寸）
+```
+
+## 虚拟环境建议
+
+推荐在项目级 venv 中安装，避免污染全局环境：
+
+```bash
+# Windows
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+# Linux / macOS
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+## 已验证的依赖版本（2026-09-14 实测）
+
+| 包 | 版本 |
+|----|------|
+| pdfplumber | 0.11.10 |
+| pypdf | 6.18.0 |
+| python-docx | 1.2.0 |
+| python-pptx | 1.0.2 |
+| PyYAML | 6.0.3 |
+| jieba | 0.42.1 |
+| rapidocr-onnxruntime | 1.2.3 |
+| pillow | 12.3.0 |
+| pywin32 | 312 |
+| docx2pdf | 0.1.8 |
